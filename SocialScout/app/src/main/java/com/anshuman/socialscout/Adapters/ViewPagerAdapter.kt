@@ -4,7 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 
-// you need to check for this adapter
+// you need to check for this adapter is good to go
 // TODO 10 we need to creter the page Adapter for this
 class ViewPagerAdapter(fm:FragmentManager):FragmentPagerAdapter(fm ,
     BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT ){
