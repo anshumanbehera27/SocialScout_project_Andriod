@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".fragements.AddFragment">
+
+    <!-- First LinearLayout -->
+    <LinearLayout
+        android:id="@+id/Post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+
+        android:orientation="horizontal">
+
+        <ImageView
+            android:padding="5dp"
+            android:id="@+id/addimage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/add" />
+
+        <TextView
+            android:id="@+id/Textviewadd"
+            android:layout_width="360dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
+            android:text="AddText"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Second LinearLayout -->
+    <LinearLayout
+        android:id="@+id/event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:padding="5dp"
+            android:id="@+id/Eventimage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/events" />
+
+        <TextView
+            android:id="@+id/TextviewEvent"
+            android:layout_width="360dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
+            android:text="Add Event"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

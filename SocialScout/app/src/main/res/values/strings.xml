@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SocialScout</string>
+    <string name="title_activity_home_page">Home_page</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="postInstraction">Your post May be apper in the Posts and can be seen on the Posts tab under your profile</string>
+
+</resources>

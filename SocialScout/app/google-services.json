@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "447428945358",
+    "project_id": "socialscout-e1d5f",
+    "storage_bucket": "socialscout-e1d5f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447428945358:android:d608d4b71c14aef9d9f79f",
+        "android_client_info": {
+          "package_name": "com.anshuman.socialscout"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBh0h3vyAUfm40t9Hx8Lwha4GAGYMq7jTI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
