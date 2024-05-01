@@ -10,8 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.anshuman.socialscout.Models.EventData
 import com.anshuman.socialscout.R
 
+
 // todo 16 Add the even adapter for the  show case the event view in the page
-class EventAdapter(var mList: List<EventData>) :
+class EventAdapter(var mList: List<EventData> ) :
     RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
 
     inner class EventViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

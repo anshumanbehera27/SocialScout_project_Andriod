@@ -40,6 +40,9 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    dataBinding{
+        enable = true
+    }
 }
 
 dependencies {
@@ -74,8 +77,10 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.12.0")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
 
-    // import it for the searc view
+    // import it for the search view
     implementation ("androidx.coordinatorlayout:coordinatorlayout:1.1.0")
+
+    // import data and time picker
 
 
 
