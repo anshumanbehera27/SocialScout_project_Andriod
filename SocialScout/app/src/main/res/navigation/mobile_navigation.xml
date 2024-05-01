@@ -21,9 +21,9 @@
         tools:layout="@layout/fragment_add" />
     <fragment
         android:id="@+id/reel"
-        android:name="com.anshuman.socialscout.fragements.ReelFragment"
+        android:name="com.anshuman.socialscout.fragements.EventFragment"
         android:label="fragment_reel"
-        tools:layout="@layout/fragment_reel" />
+        tools:layout="@layout/fragment_event" />
     <fragment
         android:id="@+id/profile"
         android:name="com.anshuman.socialscout.fragements.ProfileFragment"

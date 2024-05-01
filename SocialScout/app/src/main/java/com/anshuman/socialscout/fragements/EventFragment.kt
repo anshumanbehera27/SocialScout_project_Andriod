@@ -1,74 +1,37 @@
 package com.anshuman.socialscout.fragements
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.appcompat.widget.SearchView
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.anshuman.socialscout.Adapters.EventSearchAdapter
+import com.anshuman.socialscout.Adapters.EventAdapter
 import com.anshuman.socialscout.Models.EventData
 import com.anshuman.socialscout.R
-import java.util.*
 
-
-class SearchFragment : Fragment() {
+class EventFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
-    private lateinit var searchView: SearchView
-    private var mList = ArrayList<EventData>()
-    private lateinit var adapter: EventSearchAdapter
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_search, container, false)
+    private lateinit var adapter: EventAdapter
+    private var eventList = mutableListOf<EventData>()
 
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+        val view = inflater.inflate(R.layout.fragment_event, container, false)
         recyclerView = view.findViewById(R.id.recyclerView)
-        searchView = view.findViewById(R.id.searchView)
-
-        recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        addDataToList()
-        adapter = EventSearchAdapter(mList)
+        adapter = EventAdapter(eventList)
         recyclerView.adapter = adapter
-
-        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                return false
-            }
-
-            override fun onQueryTextChange(newText: String?): Boolean {
-                filterList(newText)
-                return true
-            }
-
-        })
-
         return view
-
-
     }
 
-    private fun filterList(query: String?) {
-        if (query != null) {
-            val filteredList = ArrayList<EventData>()
-            for (i in mList) {
-                if (i.location.lowercase(Locale.ROOT).contains(query.lowercase(Locale.ROOT))) {
-                    filteredList.add(i)
-                }
-            }
-
-            if (filteredList.isEmpty()) {
-                Toast.makeText(requireContext(), "No Data found", Toast.LENGTH_SHORT).show()
-            } else {
-                adapter.setFilteredList(filteredList)
-            }
-        }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // Add sample data to your eventList
+        // This can be done in onViewCreated() or any other appropriate place
+        addDataToList()
     }
-
     private fun addDataToList() {
         val eventTypes = listOf("Stand-up comedy", "Music concert", "Workshop", "Conference")
         val locations = listOf("Mumbai", "Delhi", "Bangalore", "Kolkata")
@@ -83,14 +46,14 @@ class SearchFragment : Fragment() {
         // Add events of different types at random locations
         for (eventType in shuffledEventTypes) {
             for (location in shuffledLocations) {
-                mList.add(EventData(eventType, location, getEventImageResource(eventIndex)))
+                eventList.add(EventData(eventType, location, getEventImageResource(eventIndex)))
                 eventIndex++ // Increment event index
             }
         }
 
         // Add images c1 to c22
         for (i in 1..22) {
-            mList.add(EventData("Event", "Location", getResourceId("c$i", "drawable")))
+            eventList.add(EventData("Event", "Location", getResourceId("c$i", "drawable")))
         }
     }
 

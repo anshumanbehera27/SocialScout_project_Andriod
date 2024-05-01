@@ -70,6 +70,15 @@ dependencies {
 
     implementation ("com.makeramen:roundedimageview:2.3.0")
 
+    // import it for the instaFeed
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
+
+    // import it for the searc view
+    implementation ("androidx.coordinatorlayout:coordinatorlayout:1.1.0")
+
+
+
 
 
 
